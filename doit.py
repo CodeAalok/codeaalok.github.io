@@ -1,12 +1,14 @@
+import sys
 import os
 from colorama import Fore, Style
 import time
 index_file = ""
 def menu():
-	print(Fore.RED)
+	print(Fore.MAGENTA)
 	print("#"*25)
 	print("1. Update your Repo")
 	print("2. Edit your page")
+	print("3. End the loop")
 	print(Style.RESET_ALL)
 	
 def choice():
@@ -28,6 +30,9 @@ def action(ch):
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
 		os.system(c)
+	if ch == 3:
+		print("Exiting now")
+		sys.exit()
 
 
 while True:
