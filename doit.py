@@ -21,7 +21,7 @@ def action(ch):
 		c2 = "git commit -m "+message
 		c3 = 'git push -u origin main'
 		os.system(c1)
-		time.sleep(4)
+#		time.sleep(4)
 		os.system(c2)
 		os.system(c3)
 		print("All done. Exiting")
