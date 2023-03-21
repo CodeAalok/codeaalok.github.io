@@ -13,8 +13,12 @@ def menu():
 	
 def choice():
 	menu()
-	ch = int(input(Fore.GREEN+"Enter your choice:\t"+Fore.YELLOW))
-	return ch
+	try:
+		ch = int(input(Fore.GREEN+"Enter your choice:\t"+Fore.YELLOW))
+		return ch
+	except Exception as e:
+		print("Error occurred",e)
+		choice()
 	
 def action(ch):
 	if ch == 1:
