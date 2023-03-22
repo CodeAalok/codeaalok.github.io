@@ -30,7 +30,12 @@ def action(ch):
 #		time.sleep(4)
 		os.system(c2)
 		os.system(c3)
-		print("All done. Exiting")
+		rand_number = random.randint(80,120)
+		print("Processing the deployment")
+		time.sleep(1)
+		print("Please wait for ",rand_number,"seconds")
+		time.sleep(rand_number)
+		print("All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
 		os.system(c)
