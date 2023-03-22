@@ -39,7 +39,7 @@ def action(ch):
 		os.system(c2)
 		os.system(c3)
 		rand_number = random.randint(80,120)
-		print("Processing the deployment")
+		print(Fore.GREEN+"Processing the deployment")
 		time.sleep(1)
 		print("Please wait for ",rand_number,"seconds")
 		for i in range(rand_number):
