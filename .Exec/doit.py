@@ -44,7 +44,7 @@ def action(ch):
 		c= random.choice(barcolors).lower()
 		print(Fore.WHITE+"Processing the deployment")
 		time.sleep(0.24)
-		print("Please wait for ",rand_number,"seconds")
+#		print("Please wait for ",rand_number,"seconds")
 #		time.sleep(rand_number)
 		for i in tqdm(range(0, 100), colour=c, desc ="Progress: "):
 			time.sleep(rand_number/1000)
