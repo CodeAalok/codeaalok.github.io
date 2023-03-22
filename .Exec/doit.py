@@ -43,7 +43,7 @@ def action(ch):
 		print(Fore.GREEN+"Processing the deployment"+Fore.RED)
 		time.sleep(1)
 		print("Please wait for ",rand_number,"seconds")
-		time.sleep(rand_number)
+#		time.sleep(rand_number)
 		for i in tqdm(range(0, 100), colour="#00ffff", desc ="Progress: "):
 			time.sleep(rand_number/100)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
