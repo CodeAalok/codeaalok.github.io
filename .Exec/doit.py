@@ -39,14 +39,14 @@ def action(ch):
 		os.system(c2)
 		os.system(c3)
 		rand_number = random.randint(80,120)
-		print(Fore.GREEN+"Processing the deployment")
+		print(Fore.GREEN+"Processing the deployment"+Fore.RED)
 		time.sleep(1)
 		print("Please wait for ",rand_number,"seconds")
 		for i in range(rand_number):
 			time.sleep(1)
 			progressBar(i,rand_number)
 #		time.sleep(rand_number)
-		print("All done. Go to your website to verify changes.")
+		print(Fore.GREEN+"All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
 		os.system(c)
