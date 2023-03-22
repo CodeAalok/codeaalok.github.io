@@ -1,9 +1,16 @@
-import random
-import sys
 import os
 from colorama import Fore, Style
-import time
 index_file = ""
+
+import sys,time,random
+def progressBar(count_value, total, suffix=''):
+    bar_length = 100
+    filled_up_Length = int(round(bar_length* count_value / float(total)))
+    percentage = round(100.0 * count_value/float(total),1)
+    bar = '=' * filled_up_Length + '-' * (bar_length - filled_up_Length)
+    sys.stdout.write('[%s] %s%s ...%s\r' %(bar, percentage, '%', suffix))
+    sys.stdout.flush()
+
 def menu():
 	print(Fore.MAGENTA)
 	print("#"*25)
@@ -11,7 +18,7 @@ def menu():
 	print("2. Edit your page")
 	print("3. End the loop")
 	print(Style.RESET_ALL)
-	
+
 def choice():
 	menu()
 	try:
@@ -20,7 +27,7 @@ def choice():
 	except Exception as e:
 		print("Error occurred",e)
 		choice()
-	
+
 def action(ch):
 	if ch == 1:
 		message = input("Enter your commit message:\t")
@@ -35,7 +42,10 @@ def action(ch):
 		print("Processing the deployment")
 		time.sleep(1)
 		print("Please wait for ",rand_number,"seconds")
-		time.sleep(rand_number)
+		for i in range(rand_number):
+			time.sleep(1)
+			progressBar(i,rand_number)
+#		time.sleep(rand_number)
 		print("All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
