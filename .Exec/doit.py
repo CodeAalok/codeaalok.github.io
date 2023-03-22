@@ -1,5 +1,6 @@
 import os
 from colorama import Fore, Style
+from tqdm import tqdm
 index_file = ""
 
 import sys,time,random
@@ -43,11 +44,8 @@ def action(ch):
 		time.sleep(1)
 		print("Please wait for ",rand_number,"seconds")
 		time.sleep(rand_number)
-#		for i in range(rand_number):
-#			time.sleep(1)
-#			print(Fore.YELLOW+str(i),end="")
-#			progressBar(i,rand_number)
-#		time.sleep(rand_number)
+		for i in tqdm(range(0, 100), colour="#00ffff", desc ="Progress: "):
+			time.sleep(rand_number/100)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
