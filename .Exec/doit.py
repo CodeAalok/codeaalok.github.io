@@ -36,16 +36,18 @@ def action(ch):
 		c2 = "git commit -m "+message
 		c3 = 'git push -u origin main'
 		os.system(c1)
-#		time.sleep(4)
 		os.system(c2)
 		os.system(c3)
 		rand_number = random.randint(80,120)
-		print(Fore.GREEN+"Processing the deployment"+Fore.RED)
-		time.sleep(1)
+
+		barcolors =['ffa500','0000FF','#008080','#6E260E','#C04000','#008000','#FF5F1F','#FF00FF','#E30B5C',]
+		c= random.choice(barcolors).lower()
+		print(Fore.WHITE+"Processing the deployment")
+		time.sleep(0.24)
 		print("Please wait for ",rand_number,"seconds")
 #		time.sleep(rand_number)
-		for i in tqdm(range(0, 100), colour="#00ffff", desc ="Progress: "):
-			time.sleep(rand_number/100)
+		for i in tqdm(range(0, 100), colour=c, desc ="Progress: "):
+			time.sleep(rand_number/1000)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
