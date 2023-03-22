@@ -44,7 +44,7 @@ def action(ch):
 		print("Please wait for ",rand_number,"seconds")
 		for i in range(rand_number):
 			time.sleep(1)
-			print(Fore.YELLOW+str(i),sep=" ")
+			print(Fore.YELLOW+str(i),end=" ")
 #			progressBar(i,rand_number)
 #		time.sleep(rand_number)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
