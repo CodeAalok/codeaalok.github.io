@@ -58,8 +58,13 @@ def action(ch):
 		print("Exiting now")
 		sys.exit()
 	if ch == "*":
-		c = "nano .Exec/doit.py"
-		os.system(c)
+		pswd = input("Enter your password:\t")
+		if pswd == "siddhi":
+			c = "nano .Exec/doit.py"
+			os.system(c)
+		else:
+			print(Fore.RED+"ACCESS DENIED.\nExiting.")
+			sys.exit()
 
 
 while True:
