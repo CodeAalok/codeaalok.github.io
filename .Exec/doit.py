@@ -46,8 +46,9 @@ def action(ch):
 		time.sleep(0.24)
 #		print("Please wait for ",rand_number,"seconds")
 #		time.sleep(rand_number)
+		denominator = random.randint(40,70)
 		for i in tqdm(range(0, 100), colour=c, desc ="Progress: "):
-			time.sleep(rand_number/1000)
+			time.sleep(rand_number/denominator)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
