@@ -48,7 +48,7 @@ def action(ch):
 #		time.sleep(rand_number)
 
 		for i in tqdm(range(0, 100), colour=c, desc ="Progress: "):
-			time.sleep(rand_number/8)
+			time.sleep(rand_number/25)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
