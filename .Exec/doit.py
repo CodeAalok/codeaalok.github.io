@@ -41,7 +41,7 @@ def action(ch):
 		os.system(c3)
 		rand_number = random.randint(15,25)
 
-		barcolors =['ffa500','0000FF','#008080','#6E260E','#C04000','#008000','#FF5F1F','#FF00FF','#E30B5C',]
+		barcolors =['0000FF','#008080','#6E260E','#C04000','#008000','#FF5F1F','#FF00FF','#E30B5C',]
 		c= random.choice(barcolors).lower()
 		print(Fore.WHITE+"Processing the deployment")
 		time.sleep(0.24)
