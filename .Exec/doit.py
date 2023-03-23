@@ -47,7 +47,7 @@ def action(ch):
 #		print("Please wait for ",rand_number,"seconds")
 #		time.sleep(rand_number)
 
-		for i in tqdm(range(0, 100), colour=c, desc ="Progress: "):
+		for i in tqdm(range(0, rand_number), colour=c, desc ="Progress: "):
 			time.sleep(1.2)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
 	if ch == 2:
