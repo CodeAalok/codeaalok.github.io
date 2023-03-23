@@ -18,19 +18,20 @@ def menu():
 	print("1. Update your Repo")
 	print("2. Edit your page")
 	print("3. End the loop")
+	print(Fore.RED+"*. EDIT SOURCE FILE")
 	print(Style.RESET_ALL)
 
 def choice():
 	menu()
 	try:
-		ch = int(input(Fore.GREEN+"Enter your choice:\t"+Fore.YELLOW))
+		ch = input(Fore.GREEN+"Enter your choice:\t"+Fore.YELLOW)
 		return ch
 	except Exception as e:
 		print("Error occurred",e)
 		choice()
 
 def action(ch):
-	if ch == 1:
+	if ch == "1":
 		message = input("Enter your commit message:\t")
 		c1 = "git add ."
 		c2 = "git commit -m "+message
@@ -50,12 +51,15 @@ def action(ch):
 		for i in tqdm(range(0, rand_number), colour=c, desc ="Progress: "):
 			time.sleep(1.2)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
-	if ch == 2:
+	if ch == "2":
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
 		os.system(c)
-	if ch == 3:
+	if ch == "3":
 		print("Exiting now")
 		sys.exit()
+	if ch == "*":
+		c = "nano .Exec/doit.py"
+		os.system(c)
 
 
 while True:
