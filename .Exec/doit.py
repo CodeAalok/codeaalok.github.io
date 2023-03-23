@@ -38,7 +38,7 @@ def action(ch):
 		os.system(c1)
 		os.system(c2)
 		os.system(c3)
-		rand_number = random.randint(80,120)
+		rand_number = random.randint(15,25)
 
 		barcolors =['ffa500','0000FF','#008080','#6E260E','#C04000','#008000','#FF5F1F','#FF00FF','#E30B5C',]
 		c= random.choice(barcolors).lower()
@@ -48,7 +48,7 @@ def action(ch):
 #		time.sleep(rand_number)
 
 		for i in tqdm(range(0, 100), colour=c, desc ="Progress: "):
-			time.sleep(rand_number/25)
+			time.sleep(1.2)
 		print(Fore.GREEN+"All done. Go to your website to verify changes.")
 	if ch == 2:
 		c = "nano /home/kali/MyProjects/Mywebsite/codeaalok.github.io/index.html"
